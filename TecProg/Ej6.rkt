@@ -1,0 +1,1 @@
+(let ((x 9)) (* x (let ((x (/ x 3))) (+ x x)))); da 54 porque la primera X vale 9 y el resto valen 3 quedando (9*(3+3))

@@ -1,0 +1,4 @@
+(define primer-num (lambda (lista) (if(null? lista) null (if (number? (car lista)) (car lista) (primer-num(cdr lista))))))
+
+(primer-num '((1 . 2) 'a (b) (5) 6 8 'a 9))
+(primer-num '((1 . 2) 'a (b) (5) 'a))

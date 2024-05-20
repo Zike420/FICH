@@ -1,0 +1,6 @@
+(define contar (lambda (x lista) (if (null? lista) 0 (if (equal? x (car lista)) (+ (contar x (cdr lista)) 1) (+ (contar x (cdr lista)) 0))))) 
+(define eliminar (lambda (x lista) (if (null? lista) lista (if (equal? x (car lista)) (eliminar x (cdr lista)) (cons (car lista) (eliminar x (cdr lista)))))))
+(define crear (lambda (x cantidad) (make-vector cantidad x)))                     
+(define agrupar (lambda (lista) (if (null? lista) lista (cons (crear (car lista) (contar (car lista) lista))  (agrupar (eliminar (car lista) lista)))))) 
+                 
+(agrupar '(A A B C A B A D C))

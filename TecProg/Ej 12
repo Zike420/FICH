@@ -1,0 +1,4 @@
+(define subst (lambda (1v 2v lista) (if (null? lista) lista (if (equal? 1v  (car lista)) (cons 2v (subst 1v 2v (cdr lista))) (cons (car lista) (subst 1v 2v (cdr lista)))))))
+
+(subst 'c 'k '( c o c o n u t))
+(subst 'a 'o '( m a n o))

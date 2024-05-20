@@ -1,0 +1,5 @@
+(define largo (lambda (X) (if (null? X) 0 (+ (largo (cdr X)) 1))))
+
+(largo '(1 4 8))
+(largo '(1 4))
+(largo '(1))
