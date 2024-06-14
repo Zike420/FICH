@@ -1,0 +1,16 @@
+(cons 'car '+) ; el cons devuelve una lista impropia ya que el segundo dato es un simbolo y no una lista.
+(list 'esto '(es muy facil)) ;el list crea una lista entre el simbolo y la lista. 
+(cons 'pero '(es muy facil)) ;el cons introduce el simbolo a la lista.
+(cons '(y ahora no se que)'hizo) ;el cons crea una lista impropia ya que el segundo dato es un simbolo.
+(quote(+ 7 2)) ;el quote indica que el + no sume y quede como simbolo además del 7 y el 2.
+(cons '+'(10 3));el cons introduce el simbolo a la lista.
+(car'(+ 10 3));el car da el primer elemento de la lista.
+(cdr'(+ 10 3));el cdr da una lista con todos los elementos menos el ultimo.
+cons;se muestra que vale como proceso cons.
+(quote(cons(car(crd(7 4)))));el quote muestra todo lo que tiene de tras como simbolo.
+(quote cons);el quote muestra el cons como simbolo.
+(car(quote(quote(cons))));el car muestra quote, ya que otro quote deja una lista con quote de simbolo y una lista.
+(+ 2 3);la suma entre 2 y 3.
+(+ '2 '3);la suma entre los simbolos 2 y 3.
+(+(car'(2 3))(car(cdr'(2 3))));dos listas, donde la primera devuelve 2 por el car y la segunda devuelve 3, luego la suma muestra el resultado de estos dos.
+((car(list + - * /))2 3);se saca de la lista de processos el primero siendo el +, y se produce la suma entre 2 y 3.

@@ -1,0 +1,4 @@
+((car (cdr (cdr (list + - * /)))) 5 5)
+;lista de procesos (+ - * /), el cdr saca la lista (- * /),
+;el otro cdr saca la lista (* /) y el car saca el *.
+;Entonces pasa que 5*5=25

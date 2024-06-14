@@ -1,0 +1,11 @@
+(define boolstr->number (lambda (e) (if (eq? e "V") 1 (if (eq? e "F") 0 "null"))))
+(define conv-dls (lambda (ls) (if (null? ls) ls (cons (abs (car ls)) (conv-dls (cdr ls))))))
+(define conv-tls (lambda (ls) (if (null? ls) ls (cons (abs (string->number (car ls))) (conv-tls (cdr ls))))))
+(define conv-bls (lambda (ls) (if (null? ls) ls (cons (boolstr->number (car ls)) (conv-bls (cdr ls))))))
+(define conv-single-list (lambda (ls) (if (eq? "D" (car ls)) (conv-dls (cadr ls)) (if (eq? "T" (car ls)) (conv-tls (cadr ls)) (if (eq? "B" (car ls)) (conv-bls (cadr ls)) "null"))))) 
+(define convdatos (lambda (ls) (if (null? ls) ls (cons (conv-single-list (car ls)) (convdatos (cdr ls))))))
+(convdatos '(
+("D" (1 2 3 4 5))
+("T" ("6" "7" "8"))
+("B" ("V" "F"))
+))

@@ -1,0 +1,5 @@
+(define mascorta (lambda (x y)  (if (<= (length x) (length y)) x y)))
+
+(mascorta '(a b) '(c d e))
+(mascorta '(a b) '(c d))
+(mascorta '(a b) '(c))

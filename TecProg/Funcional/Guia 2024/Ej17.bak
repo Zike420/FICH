@@ -1,0 +1,8 @@
+(define convdatos (lambda (x) (if(null? x) null (if()))))
+
+
+(convdatos '(
+("D" (1 2 3 4 5))
+("T" ("6" "7" "8"))
+("B" ("V" "F"))
+))
