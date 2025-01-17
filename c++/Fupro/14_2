@@ -1,0 +1,136 @@
+ FreeMat v4.1
+
+ Copyright (c) 2002-2008 by Samit Basu
+
+ Licensed under the GNU Public License (GPL)
+
+ Type <help license> to find out more
+
+      <helpwin> for online help
+
+      <pathtool> to set or change your path
+
+ Use <dbauto on/off> to control stop-on-error behavior
+
+ Use ctrl-b to stop execution of a function/script
+
+ JIT is enabled by default - use jitcontrol to change it
+
+ Use <rootpath gui> to set/change where the FreeMat toolbox is installed
+
+--> f=[1 -4 12]
+
+
+
+f =
+
+  1 -4 12
+
+
+
+--> g=[7 -12]
+
+
+
+g =
+
+   7 -12
+
+
+
+--> h=1:1:10
+
+
+
+h =
+
+  1  2  3  4  5  6  7  8  9 10
+
+
+
+--> y1=polyval(f,h);
+
+--> y2=polyval(g,h);
+
+--> plot(h,y1)
+
+--> hold on
+
+--> plot(h,y2)
+
+--> grid on
+
+--> %Tablas
+
+--> tabla1 = [h', y1']
+
+
+
+tabla1 =
+
+  1  9
+
+  2  8
+
+  3  9
+
+  4 12
+
+  5 17
+
+  6 24
+
+  7 33
+
+  8 44
+
+  9 57
+
+ 10 72
+
+
+
+--> tabla2 = [h', y2']
+
+
+
+tabla2 =
+
+  1 -5
+
+  2  2
+
+  3  9
+
+  4 16
+
+  5 23
+
+  6 30
+
+  7 37
+
+  8 44
+
+  9 51
+
+ 10 58
+
+
+
+--> %comparando tablas se puede ver que ambas rectas se cortan tanto en (3,9) como
+en (8,44).
+
+--> %Teniendo esto como dato, se realizan las linas que lo mustren
+
+--> plot([8,8],[20,70],'LineWidth',3)
+
+--> plot([3,3],[0,30],'LineWidth',3)
+
+--> title('Desafio 14')
+
+--> xlabel('Eje h')
+
+--> ylabel('Eje y')
+
+-->

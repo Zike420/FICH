@@ -1,0 +1,60 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct paciente {
+	string apellido, nombres, tel;
+	int DNI;
+	char sexo;
+	string OS;
+	int edad;
+	int mujeres, total;
+};
+struct lista_de_paciente {
+	vector<paciente>  b;
+	int menoredad;
+	int cantmujer;
+};
+
+lista_de_paciente (vector<paciente> p)); paciente menores(paciente p);
+
+int main() {
+	int n;
+	cin >> n;
+	vector<paciente>  p(n);
+	paciente x;
+	for(int i=0;i<n;++i) {  } { 
+		cin >> x.apellido >> x.nombres >> x. tel;
+		cin >> x.DNI;
+		cin >> x.sexo;
+		cin >> x.OS;
+		cin >> x.edad;
+	}
+	lista_de_paciente mujer;
+	paciente menoresdeedad;
+	mujer = mujeres(p);
+	menoresdeedad = menores(p);
+	cout << "Cantidad de mujeres " << mujer << endl;
+	cout << "Cantidad de menores de 45" << menoresdeedad;
+	return 0;
+}
+lista_de_paciente mujeres (vector<paciente>  p) {
+	peciente r, s, t;
+	for(size_t p=0;p<p.size();++p) { 
+		if (p.sexo=='F'){
+			r.mujeres;
+		}
+		++s.total;
+	}
+	t = (r.mujeres*100)/s.total;
+	return  t;
+};
+paciente menores(paciente p) {
+	menoredad.edad
+	
+	if (menoredad.edad<45) {
+		++r;
+	}
+	
+	return r;
+}
